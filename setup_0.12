@@ -188,7 +188,7 @@ fi
 
 # Populating Cache
 print_status "Populating apt-get cache..."
-exec_cmd 'apt-get update --allow-unauthenticated'
+exec_cmd 'apt-get --allow-unauthenticated update'
 
 if [ "X${PRE_INSTALL_PKGS}" != "X" ]; then
     print_status "Installing packages required for setup:${PRE_INSTALL_PKGS}..."
